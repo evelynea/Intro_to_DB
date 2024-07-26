@@ -4,7 +4,7 @@ use alx_book_store;
 
 CREATE TABLE Books(
     book_id INT PRIMARY KEY AUTO_INCREMENT,
-    TITLE VARCHAR(130) NOT NULL,
+    title VARCHAR(130) NOT NULL,
     author_id INT,
     price DOUBLE,
     publication_date DATE,
