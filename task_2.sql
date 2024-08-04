@@ -36,14 +36,14 @@ CREATE TABLE IF NOT EXISTS Orders (
 );
 
 -- Create the 'OrderDetails' table
-CREATE TABLE IF NOT EXISTS OrderDetails (
-    ID INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE IF NOT EXISTS Order_Details (
+    book_id INT AUTO_INCREMENT PRIMARY KEY,
     OrderID INT,
     BookID INT,
-    Quantity INT NOT NULL,
+    quantity DOUBLE NOT NULL,
     Price DECIMAL(10, 2) NOT NULL,
-    FOREIGN KEY (OrderID) REFERENCES Orders(ID),
-    FOREIGN KEY (BookID) REFERENCES Books(ID)
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
 ) NOT NULL,
     Email VARCHAR(255) UNIQUE NOT NULL,
