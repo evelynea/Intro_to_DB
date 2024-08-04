@@ -10,9 +10,9 @@ CREATE TABLE IF NOT EXISTS Authors (
 -- Create the 'Books' table
 CREATE TABLE IF NOT EXISTS Books (
     ID INT AUTO_INCREMENT PRIMARY KEY,
-    Title VARCHAR(255) NOT NULL,
+    title VARCHAR(255) NOT NULL,
     Description TEXT,
-    UnitPrice DECIMAL(10, 2) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
     Thumbnail VARCHAR(255),
     AuthorID INT,
     FOREIGN KEY (AuthorID) REFERENCES Authors(AuthorID)
